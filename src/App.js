@@ -6,7 +6,22 @@ function App() {
   console.log(data);
   return (
     <div>
-      <h1>직업 목록</h1>
+      <header className="w-full h-[80px] bg-slate-500 flex justify-center">
+        {/* Logo */}
+        <div className="w-full max-w-[1200px] h-full">
+          <div className="h-full">
+            <img
+              className="h-full"
+              src="https://img.freepik.com/premium-vector/cooking-logo_10250-512.jpg"
+              alt=""
+            />
+          </div>
+        </div>
+      </header>
+      {/* <section>
+        <div id="container">Section</div>
+      </section>
+      <footer>Footer</footer> */}
     </div>
   );
 }
