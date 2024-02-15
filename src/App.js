@@ -1,7 +1,7 @@
 import { useQuery } from "react-query";
 import { expressTest } from "./api";
 import "bootstrap/dist/css/bootstrap.css";
-import { Carousel } from "react-bootstrap"; // Bootstrap Carousel import
+import { Button, Carousel } from "react-bootstrap"; // Bootstrap Carousel import
 function App() {
   const { data } = useQuery("test", expressTest);
   console.log(data);
@@ -109,10 +109,34 @@ function App() {
           </div>
         </Carousel.Item>
       </Carousel>
-      {/* <section>
-        <div id="container">Section</div>
+      {/* 첫번쨰 섹션 */}
+      <section className="w-full h-[800px] flex justify-center ">
+        <div
+          id="container"
+          className="w-full h-full max-w-[1200px] bg-slate-200 p-10"
+        >
+          {/* 왼쪽 자식 */}
+          <div className="w-1/2">
+            <h1>이건어떄요?</h1>
+            <h1>인기 검색어</h1>
+            <hr className="w-9" />
+            <p>고민을 덜어주는 추천 검색어 </p>
+            <Button variant="light"># 카레</Button> <br />
+            <br />
+            <Button variant="light"># 햄버거</Button> <br />
+            <br />
+            <Button variant="light"># 피자</Button> <br />
+            <br />
+            <Button variant="light">Light</Button> <br />
+            <br />
+            <Button variant="light">Light</Button> <br />
+            <br />
+          </div>
+          {/* 오른쪽 자식 */}
+          <div className="w-1/2"></div>
+        </div>
       </section>
-      <footer>Footer</footer> */}
+      {/* <footer>Footer</footer> */}
     </div>
   );
 }
