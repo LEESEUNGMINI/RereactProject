@@ -52,48 +52,63 @@ function App() {
 
       <Carousel>
         <Carousel.Item>
-          <div className="h-[710px] position-relative flex justify-center">
+          <div className="h-[710px] flex justify-center">
             <img
               className="position-absolute top-0 start-0 w-100 h-100 object-cover darken-image"
               src="https://ottogi.okitchen.co.kr/pds/upfile/2020-08-23_214060951[27].jpg"
               alt="First slide"
             />
-            <div className="w-full h-full max-w-[1200px]">
-              <div className="absolute top-50 left-10  text-white">
-                <h3 className="text-5xl font-bold mb-3">맛있고 든든하게</h3>
-                <h3 className="text-5xl font-bold mb-3">영양챙기기</h3>
+            <div className="w-full h-full max-w-[1200px] relative">
+              <div className="absolute top-40 left-10  text-white">
+                <h3 className="text-6xl font-semibold mb-3">맛있고 든든하게</h3>
+                <h3 className="text-6xl font-bold mb-3">영양챙기기</h3>
                 <p className="text-lg mb-5">
                   Nulla vitae elit libero, a pharetra augue mollis interdum.
                 </p>
-                <button className="btn btn-danger btn-lg">자세히 보기</button>
+                <button className="btn btn-danger btn-lg">레시피 보기</button>
               </div>
             </div>
           </div>
         </Carousel.Item>
         <Carousel.Item>
-          <img
-            className="d-block w-100 h-[710px] object-cover darken-image "
-            src="https://ottogi.okitchen.co.kr/pds/upfile/2020-08-21_833988909[3].jpg"
-            alt="Second slide"
-          />
-
-          <h3>맛있고 든든하게 영양챙기기</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+          <div className="h-[710px] flex justify-center">
+            <img
+              className="position-absolute top-0 start-0 w-100 h-100 object-cover darken-image"
+              src=" https://ottogi.okitchen.co.kr/pds/upfile/2020-08-21_833988909[3].jpg"
+              alt="First slide"
+            />
+            <div className="w-full h-full max-w-[1200px] relative">
+              <div className="absolute top-40 left-10  text-white">
+                <h3 className="text-6xl font-semibold mb-3">맛있고 든든하게</h3>
+                <h3 className="text-6xl font-bold mb-3">영양챙기기</h3>
+                <p className="text-lg mb-5">
+                  Nulla vitae elit libero, a pharetra augue mollis interdum.
+                </p>
+                <button className="btn btn-danger btn-lg">레시피 보기</button>
+              </div>
+            </div>
+          </div>
         </Carousel.Item>
         <Carousel.Item>
-          <img
-            className="d-block w-100 h-[710px] object-cover darken-image"
-            src="https://ottogi.okitchen.co.kr/pds/upfile/2021-09-03_177186357[29].jpg"
-            alt="Third slide"
-          />
-
-          <h3>맛있고 든든하게 영양챙기기</h3>
-          <p>
-            Praesent commodo cursus magna, vel scelerisque nisl consectetur.
-          </p>
+          <div className="h-[710px] flex justify-center">
+            <img
+              className="position-absolute top-0 start-0 w-100 h-100 object-cover darken-image"
+              src="https://ottogi.okitchen.co.kr/pds/upfile/2021-09-03_177186357[29].jpg"
+              alt="First slide"
+            />
+            <div className="w-full h-full max-w-[1200px] relative">
+              <div className="absolute top-40 left-10  text-white">
+                <h3 className="text-6xl font-semibold mb-3">맛있고 든든하게</h3>
+                <h3 className="text-6xl font-bold mb-3">영양챙기기</h3>
+                <p className="text-lg mb-5">
+                  Nulla vitae elit libero, a pharetra augue mollis interdum.
+                </p>
+                <button className="btn btn-danger btn-lg">레시피 보기</button>
+              </div>
+            </div>
+          </div>
         </Carousel.Item>
       </Carousel>
-
       {/* <section>
         <div id="container">Section</div>
       </section>
