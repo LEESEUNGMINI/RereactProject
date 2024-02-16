@@ -8,7 +8,8 @@ import { CiYoutube } from "react-icons/ci";
 
 function App() {
   const { data } = useQuery("test", expressTest);
-  console.log(data);
+  const Data = data?.COOKRCP01.row;
+  console.log(Data);
   return (
     <div>
       <header className="w-full h-[130px] bg-[#CD2032] flex justify-center">
@@ -218,12 +219,12 @@ function App() {
           <p className="text-black text-3xl font-bold mb-6">
             쉽게, 빠르게, 맛있게
           </p>
-          <Button variant="outline-dark">레시피 구경하기</Button>
+          <Button variant="outline-dark" style={{ fontWeight: 'bold' }}>레시피 구경하기</Button>
         </div>
       </section>
       {/* 세번째 섹션 */}
       <section>
-        <div className="w-full h-screen flex justify-center">
+        <div className="w-full h-auto flex justify-center">
           <div className="w-full h-full max-w-[1200px] ">
             {/* 타이틀 */}
             <div className="w-full h-40  flex flex-col justify-center items-center">
@@ -231,14 +232,21 @@ function App() {
               <hr className="w-9 mb-6 border-t-4 border-black" />
             </div>
             {/* 아래 그리드 */}
-            <div className="grid grid-cols-2 gap-4">
-              <div className="bg-gray-200 p-4">그리드 아이템 1</div>
-              <div className="bg-gray-300 p-4">그리드 아이템 2</div>
-              <div className="bg-gray-400 p-4">그리드 아이템 3</div>
-              <div className="bg-gray-500 p-4">그리드 아이템 4</div>
-              <div className="bg-gray-600 p-4">그리드 아이템 5</div>
-              <div className="bg-gray-700 p-4">그리드 아이템 6</div>
+       
+            <div className="grid grid-cols-4 gap-4">
+              {Data?.slice(28, 36).map((item, index) => (
+               <div key={index} className="flex flex-col items-center">
+              {/* 이미지 */}
+              <img
+              src={item?.ATT_FILE_NO_MAIN} // 이미지 소스
+               alt={item?.RCP_NM} // 대체 텍스트
+               className="w-full h-auto rounded-lg object-cover"
+              />
+           {/* 소개 */}
+           <div className="text-center mt-2">{item?.RCP_NM}</div>
             </div>
+               ))}
+              </div>
           </div>
         </div>
       </section>
@@ -262,9 +270,9 @@ function App() {
         <div className="w-full max-w-[1200px] h-full p-5">
           <div className="h-full w-full flex justify-between items-center">
             <div className="flex flex-col text-white font-bold text-[16px]">
-              <h7 className="font-bold">(주)CcooK</h7>
-              <h7>대구광역시 동구 화랑로 525 </h7>
-              <h7>Copyright ⓒ CcooK.,Ltd All Rights Reserved.</h7>
+              <h6 className="font-bold">(주)CcooK</h6>
+              <h6>대구광역시 동구 화랑로 525 </h6>
+              <h6>Copyright ⓒ CcooK.,Ltd All Rights Reserved.</h6>
             </div>
 
             <div className="flex space-x-4 h-full items-center text-white text-[24px]">
@@ -286,5 +294,5 @@ function App() {
     </div>
   );
 }
-
+// zz
 export default App;
