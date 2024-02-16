@@ -2,6 +2,7 @@ import { useQuery } from "react-query";
 import { expressTest } from "./api";
 import "bootstrap/dist/css/bootstrap.css";
 import { Button, Carousel } from "react-bootstrap"; // Bootstrap Carousel import
+import { Link } from "react-router-dom";
 function App() {
   const { data } = useQuery("test", expressTest);
   console.log(data);
@@ -32,19 +33,13 @@ function App() {
       <div className="w-full h-20 flex justify-center bg-slate-50 shadow-md">
         <div className="w-full max-w-[1200px] h-16 font-bold  flex space-x-9 items-center p-5 text-[20px] text-gray-600">
           <div className=" border-black w-[130px] ">
-            <a href="#" className=" decoration-slate-50 text-black">
-              <p className="hover:text-[#CD2032] duration-200">인기 레시피</p>
-            </a>
+            <p className="hover:text-[#CD2032] duration-200">인기 레시피</p>
           </div>
           <div className=" border-black w-[140px] hover:text-[#CD2032] duration-200">
-            <a href="#" className=" decoration-slate-50 text-black">
-              <p className="hover:text-[#CD2032] duration-200">신규 레시피</p>
-            </a>
+            <p className="hover:text-[#CD2032] duration-200">신규 레시피</p>
           </div>
           <div className="w-[100px] hover:text-[#CD2032] duration-200">
-            <a href="#" className=" decoration-slate-50 text-black">
-              <p className="hover:text-[#CD2032] duration-200">계량 팁</p>
-            </a>
+            <p className="hover:text-[#CD2032] duration-200">계량 팁</p>
           </div>
         </div>
       </div>
@@ -117,7 +112,7 @@ function App() {
         >
           {/* 왼쪽 자식 */}
           <div className="w-1/2">
-            <h1>이건어떄요?</h1>
+            <h1>이건 어떠세요?</h1>
             <h1>인기 검색어</h1>
             <hr className="w-9" />
             <p>고민을 덜어주는 추천 검색어 </p>
@@ -136,7 +131,7 @@ function App() {
           <div className="w-1/2"></div>
         </div>
       </section>
-      {/* <footer>Footer</footer> */}
+      <footer>Footer</footer>
     </div>
   );
 }
