@@ -33,13 +33,19 @@ function App() {
       <div className="w-full h-20 flex justify-center bg-slate-50 shadow-md">
         <div className="w-full max-w-[1200px] h-16 font-bold  flex space-x-9 items-center p-5 text-[20px] text-gray-600">
           <div className=" border-black w-[130px] ">
-            <p className="hover:text-[#CD2032] duration-200">인기 레시피</p>
+            <p className="hover:text-[#CD2032] duration-200 cursor-pointer">
+              인기 레시피
+            </p>
           </div>
           <div className=" border-black w-[140px] hover:text-[#CD2032] duration-200">
-            <p className="hover:text-[#CD2032] duration-200">신규 레시피</p>
+            <p className="hover:text-[#CD2032] duration-200 cursor-pointer">
+              신규 레시피
+            </p>
           </div>
           <div className="w-[100px] hover:text-[#CD2032] duration-200">
-            <p className="hover:text-[#CD2032] duration-200">계량 팁</p>
+            <p className="hover:text-[#CD2032] duration-200 cursor-pointer">
+              계량 팁
+            </p>
           </div>
         </div>
       </div>
@@ -105,33 +111,167 @@ function App() {
         </Carousel.Item>
       </Carousel>
       {/* 첫번쨰 섹션 */}
-      <section className="w-full h-[800px] flex justify-center ">
+      <section className="w-full h-[800px] flex justify-center">
         <div
           id="container"
-          className="w-full h-full max-w-[1200px] bg-slate-200 p-10"
+          className="w-full h-full max-w-[1200px]  p-10 pt-24 flex justify-center"
         >
           {/* 왼쪽 자식 */}
-          <div className="w-1/2">
-            <h1>이건 어떠세요?</h1>
-            <h1>인기 검색어</h1>
-            <hr className="w-9" />
-            <p>고민을 덜어주는 추천 검색어 </p>
-            <Button variant="light"># 카레</Button> <br />
-            <br />
-            <Button variant="light"># 햄버거</Button> <br />
-            <br />
-            <Button variant="light"># 피자</Button> <br />
-            <br />
-            <Button variant="light">Light</Button> <br />
-            <br />
-            <Button variant="light">Light</Button> <br />
-            <br />
+          <div className="w-1/2 flex flex-col items-center bg-white shadow-lg rounded-l-lg p-6 pt-16 ">
+            <h1 className="font-bold mb-2">이건 어때요?</h1>
+            <h1 className="font-bold mb-2">인기 검색어</h1>
+            <hr className="w-9 mb-6 border-t-4 border-black" />
+            <p className="mb-6 font-semibold text-gray-500">
+              고민을 덜어주는 추천 검색어
+            </p>
+            <div className="pl-8 space-x-2">
+              <Button
+                variant="outline-danger"
+                className="mb-2 hover:bg-red-500 hover:text-white transition duration-300 p-2 rounded-lg"
+              >
+                # 파스타
+              </Button>
+              <Button
+                variant="outline-danger"
+                className="mb-2 hover:bg-red-500 hover:text-white transition duration-300 p-2 rounded-lg"
+              >
+                # 스테이크
+              </Button>
+              <Button
+                variant="outline-danger"
+                className="mb-2 hover:bg-red-500 hover:text-white transition duration-300 p-2 rounded-lg"
+              >
+                # 피자
+              </Button>
+              <Button
+                variant="outline-danger"
+                className="mb-2 hover:bg-red-500 hover:text-white transition duration-300 p-2 rounded-lg"
+              >
+                # 샐러드
+              </Button>
+              <Button
+                variant="outline-danger"
+                className="mb-2 hover:bg-red-500 hover:text-white transition duration-300 p-2 rounded-lg"
+              >
+                # 떡볶이
+              </Button>
+              <Button
+                variant="outline-danger"
+                className="mb-2 hover:bg-red-500 hover:text-white transition duration-300 p-2 rounded-lg"
+              >
+                # 카레
+              </Button>
+              <Button
+                variant="outline-danger"
+                className="mb-2 hover:bg-red-500 hover:text-white transition duration-300 p-2 rounded-lg"
+              >
+                # 초밥
+              </Button>
+              <Button
+                variant="outline-danger"
+                className="mb-2 hover:bg-red-500 hover:text-white transition duration-300 p-2 rounded-lg"
+              >
+                # 햄버거
+              </Button>
+              <Button
+                variant="outline-danger"
+                className="mb-2 hover:bg-red-500 hover:text-white transition duration-300 p-2 rounded-lg"
+              >
+                # 라면
+              </Button>
+            </div>
           </div>
           {/* 오른쪽 자식 */}
-          <div className="w-1/2"></div>
+          <div className="w-1/2 flex justify-center items-center shadow-lg rounded-r-lg overflow-hidden">
+            <div className="w-full h-full bg-[url('https://cdn.pixabay.com/photo/2019/01/25/21/36/spaghetti-3955377_1280.jpg')] bg-cover bg-center flex flex-col justify-center items-center">
+              <div className="text-white p-4  ">
+                <div className="border-8 border-white p-4 relative rounded-xl">
+                  <div className="flex flex-col items-start ">
+                    <h2 className="font-bold z-10">CcooK의 </h2>
+                    <h2 className="font-bold z-10">쉽고 간단한 </h2>
+                    <h2 className="font-bold z-10">계량 꿀팁 !</h2>
+                    <p className="z-10 mt-8 font-semibold">
+                      반숟가락,종이컵으로
+                      <br />
+                      쉽고 간단하게 알려드립니다!
+                    </p>
+                  </div>
+                  <div className=" w-full h-full  absolute bg-[rgba(0,0,0,0.5)] top-0 left-0"></div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
-      <footer>Footer</footer>
+      {/* 두번쨰 섹션 */}
+      <section className="w-full mt-16 h-[400px] bg-[url('https://ottogi.okitchen.co.kr/images/main/section02_bg.jpg')] bg-cover bg-center flex justify-center items-center">
+        <div className="text-center pb-24">
+          <h2 className="text-red-500 text-5xl font-bold mb-4">
+            요리를 더 쉽게!
+          </h2>
+          <p className="text-black text-2xl font-semibold mb-6">
+            CcooK의 각종 소스들로 모든 레시피를 보다
+          </p>
+          <p className="text-black text-3xl font-bold mb-6">
+            쉽게, 빠르게, 맛있게
+          </p>
+          <Button variant="outline-dark">레시피 구경하기</Button>
+        </div>
+      </section>
+      {/* 세번째 섹션 */}
+      <section>
+        <div className="w-full h-screen flex justify-center">
+          <div className="w-full h-full max-w-[1200px] ">
+            {/* 타이틀 */}
+            <div className="w-full h-40  flex flex-col justify-center items-center">
+              <h1 className="font-bold mb-2">추천 레시피</h1>
+              <hr className="w-9 mb-6 border-t-4 border-black" />
+            </div>
+            {/* 아래 그리드 */}
+            <div className="grid grid-cols-2 gap-4">
+              <div className="bg-gray-200 p-4">그리드 아이템 1</div>
+              <div className="bg-gray-300 p-4">그리드 아이템 2</div>
+              <div className="bg-gray-400 p-4">그리드 아이템 3</div>
+              <div className="bg-gray-500 p-4">그리드 아이템 4</div>
+              <div className="bg-gray-600 p-4">그리드 아이템 5</div>
+              <div className="bg-gray-700 p-4">그리드 아이템 6</div>
+            </div>
+          </div>
+        </div>
+      </section>
+      {/* 푸터 위에있는 작은 바  */}
+      <div className="w-full h-20 flex justify-center bg-[#A20A1F] shadow-md">
+        <div className="w-full max-w-[1200px] h-16 font-bold  flex space-x-9 items-center p-5 text-[20px] text-white">
+          <div className=" border-black w-[130px] ">
+            <p className=" duration-200 cursor-pointer">인기 레시피</p>
+          </div>
+          <div className=" border-black w-[140px] duration-200">
+            <p className=" duration-200 cursor-pointer">신규 레시피</p>
+          </div>
+          <div className="w-[100px]  duration-200">
+            <p className=" duration-200 cursor-pointer">계량 팁</p>
+          </div>
+        </div>
+      </div>
+      {/* 푸터 */}
+      <footer className="w-full h-[130px] bg-[#CD2032] flex justify-center">
+        {/* Logo */}
+        <div className="w-full max-w-[1200px] h-full p-5">
+          <div className="h-full w-full flex justify-between items-center">
+            <div className="flex flex-col text-white font-bold text-[16px]">
+              <h7 className="font-bold">(주)CcooK</h7>
+              <h7>대구광역시 동구 화랑로 525 </h7>
+              <h7>Copyright ⓒ CcooK.,Ltd All Rights Reserved.</h7>
+            </div>
+
+            <div className="flex space-x-4 h-full items-center text-white">
+              <p>아이콘1</p>
+              <p>아이콘2</p>
+              <p>아이콘3</p>
+            </div>
+          </div>
+        </div>
+      </footer>
     </div>
   );
 }

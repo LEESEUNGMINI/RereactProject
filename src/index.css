@@ -9,6 +9,15 @@ body {
 .darken-image {
   filter: brightness(90%); /* 이미지 밝기 조절 */
 }
+.thedarken-image {
+  filter: brightness(80%); /* 이미지 밝기 조절 */
+}
+
+/* 커스텀 호버 스타일 */
+.btn-custom:hover {
+  background-color: red;
+  color: white;
+}
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
