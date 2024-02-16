@@ -5,20 +5,8 @@ import { Button, Carousel } from "react-bootstrap"; // Bootstrap Carousel import
 import { FaInstagram } from "react-icons/fa";
 import { FaSquareFacebook } from "react-icons/fa6";
 import { CiYoutube } from "react-icons/ci";
-import { useState } from "react";
 
 function App() {
-  const [currentIndex, setCurrentIndex] = useState(0);
-
-  const nextSlide = () => {
-    const newIndex = (currentIndex + 1) % data.length;
-    setCurrentIndex(newIndex);
-  };
-
-  const prevSlide = () => {
-    const newIndex = currentIndex === 0 ? data.length - 1 : currentIndex - 1;
-    setCurrentIndex(newIndex);
-  };
   const { data } = useQuery("test", expressTest);
   const Data = data?.COOKRCP01.row;
   console.log(Data);
