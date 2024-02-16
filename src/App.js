@@ -10,6 +10,17 @@ function App() {
   const { data } = useQuery("test", expressTest);
   const Data = data?.COOKRCP01.row;
   console.log(Data);
+
+  // 데이터를 4개씩 묶어 배열로 반환하는 함수
+  const chunkArray = (arr, chunkSize) => {
+    return Array.from(
+      { length: Math.ceil(arr?.length / chunkSize) },
+      (_, index) => arr.slice(index * chunkSize, index * chunkSize + chunkSize)
+    );
+  };
+
+  // 데이터를 4개씩 묶어서 배열로 만듭니다.
+  const chunkedData = chunkArray(Data, 4);
   return (
     <div>
       <header className="w-full h-[130px] bg-[#CD2032] flex justify-center">
@@ -278,25 +289,39 @@ function App() {
             Ccook만의 간편식이 근사한 요리가 되는 팁을 공개합니다.
           </p>
         </div>
-        <div className="w-auto flex space-x-12 ">
-          {Data?.slice(100, 110).map((item, index) => (
-            <div key={index} className="flex flex-col items-center relative">
-              {/* 이미지 */}
-              <img
-                src={item?.ATT_FILE_NO_MAIN} // 이미지 소스
-                alt={item?.RCP_NM} // 대체 텍스트
-                className="w-[500px] h-[400px] rounded-lg object-cover object-center "
-              />
-              {/* 소개 */}
-              <div className="flex space-x-4 mt-10 font-semibold text-gray-500">
-                <span>#{item?.RCP_PAT2}</span>
-                <span>#{item?.RCP_WAY2}</span>
-                <span>#인기상품</span>
+        {/* Carousel 컴포넌트 */}
+        <Carousel
+          id="Menu_carousel"
+          className="bg-[url('https://ottogi.okitchen.co.kr/images/main/section04_bg.jpg')]"
+        >
+          {chunkedData.map((chunk, index) => (
+            <Carousel.Item key={index}>
+              {/* 한 번에 4개씩 이미지를 보여줄 수 있도록 각각의 아이템에서 4개의 이미지를 보여줍니다. */}
+              <div className="flex justify-center space-x-12">
+                {chunk.map((item, itemIndex) => (
+                  <div
+                    key={itemIndex}
+                    className="flex flex-col items-center relative"
+                  >
+                    {/* 이미지 */}
+                    <img
+                      src={item?.ATT_FILE_NO_MAIN} // 이미지 소스
+                      alt={item?.RCP_NM} // 대체 텍스트
+                      className="w-[500px] h-[400px] rounded-lg object-cover object-center"
+                    />
+                    {/* 소개 */}
+                    <div className="flex space-x-4 mt-10 font-semibold text-gray-500">
+                      <span>#{item?.RCP_PAT2}</span>
+                      <span>#{item?.RCP_WAY2}</span>
+                      <span>#인기상품</span>
+                    </div>
+                    <div className="font-bold text-[30px]">{item?.RCP_NM}</div>
+                  </div>
+                ))}
               </div>
-              <div className=" font-bold text-[30px]">{item?.RCP_NM}</div>
-            </div>
+            </Carousel.Item>
           ))}
-        </div>
+        </Carousel>
       </section>
       {/* 푸터 위에있는 작은 바  */}
       <div className="w-full h-20 flex justify-center bg-[#A20A1F] shadow-md">

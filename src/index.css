@@ -18,6 +18,9 @@ body {
   background-color: red;
   color: white;
 }
+#Menu_carousel Button{
+  display: none
+}
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
