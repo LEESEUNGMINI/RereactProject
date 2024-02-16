@@ -2,7 +2,7 @@ import { useQuery } from "react-query";
 import { expressTest } from "./api";
 import "bootstrap/dist/css/bootstrap.css";
 import { Button, Carousel } from "react-bootstrap"; // Bootstrap Carousel import
-import { Link } from "react-router-dom";
+
 function App() {
   const { data } = useQuery("test", expressTest);
   console.log(data);
