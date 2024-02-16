@@ -234,21 +234,26 @@ function App() {
             {/* 아래 그리드 */}
        
             <div className="grid grid-cols-4 gap-4">
-              {Data?.slice(28, 36).map((item, index) => (
-               <div key={index} className="flex flex-col items-center">
+              {Data?.slice(40, 48).map((item, index) => (
+               <div key={index} className="flex flex-col items-center relative">
               {/* 이미지 */}
               <img
               src={item?.ATT_FILE_NO_MAIN} // 이미지 소스
                alt={item?.RCP_NM} // 대체 텍스트
-               className="w-full h-auto rounded-lg object-cover"
+               className="w-full h-[240px] rounded-lg object-cover "
               />
+            <div className="w-[55px] h-[55px] rounded-[50%] absolute bottom-8 right-14 bg-[#CD2032] flex justify-center font-semibold items-center text-white text-[14px]">인기</div>
+            <div className="w-[55px] h-[55px] rounded-[50%] absolute bottom-8 -right-0 bg-[#f49700] flex justify-center font-semibold items-center text-white text-[14px]">{item?.RCP_WAY2}</div>
            {/* 소개 */}
-           <div className="text-center mt-2">{item?.RCP_NM}</div>
+           <div className="w-full">
+           <div className="mt-3 font-bold text-[20px]">{item?.RCP_NM}</div>
+            </div>
             </div>
                ))}
               </div>
           </div>
         </div>
+        
       </section>
       {/* 푸터 위에있는 작은 바  */}
       <div className="w-full h-20 flex justify-center bg-[#A20A1F] shadow-md">
@@ -294,5 +299,4 @@ function App() {
     </div>
   );
 }
-// zz
 export default App;
