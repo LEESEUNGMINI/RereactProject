@@ -2,6 +2,9 @@ import { useQuery } from "react-query";
 import { expressTest } from "./api";
 import "bootstrap/dist/css/bootstrap.css";
 import { Button, Carousel } from "react-bootstrap"; // Bootstrap Carousel import
+import { FaInstagram } from "react-icons/fa";
+import { FaSquareFacebook } from "react-icons/fa6";
+import { CiYoutube } from "react-icons/ci";
 
 function App() {
   const { data } = useQuery("test", expressTest);
@@ -264,10 +267,18 @@ function App() {
               <h7>Copyright ⓒ CcooK.,Ltd All Rights Reserved.</h7>
             </div>
 
-            <div className="flex space-x-4 h-full items-center text-white">
-              <p>아이콘1</p>
-              <p>아이콘2</p>
-              <p>아이콘3</p>
+            <div className="flex space-x-4 h-full items-center text-white text-[24px]">
+              <p>
+                <FaInstagram />
+              </p>
+              <p>
+                {" "}
+                <FaSquareFacebook />
+              </p>
+              <p>
+                {" "}
+                <CiYoutube />
+              </p>
             </div>
           </div>
         </div>
