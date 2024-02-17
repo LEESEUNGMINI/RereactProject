@@ -334,23 +334,30 @@ function App() {
             </div>
             {/* 아래 그리드 */}
 
-            <div className="grid grid-cols-4 gap-4">
-              {Data?.slice(80, 88).map((item, index) => (
+            <div id="Grid_div">
+              {Data?.slice(97, 103).map((item, index) => (
                 <div
                   key={index}
-                  className="flex flex-col items-center relative"
+                  className={`divs div-${
+                    index + 1
+                  } flex flex-col items-center relative`}
                 >
                   {/* 이미지 */}
                   <img
                     src={item?.ATT_FILE_NO_MAIN} // 이미지 소스
                     alt={item?.RCP_NM} // 대체 텍스트
-                    className="w-full h-[240px] rounded-lg object-cover object-center "
+                    className="w-full h-[auto] object-cover object-center "
                   />
 
                   {/* 소개 */}
-                  <div className="w-full">
+                  <div className={`w-full texts text-${index + 1}`}>
                     <div className="mt-3 font-bold text-[20px]">
-                      {item?.RCP_NM}
+                      <div className="space-x-3 text-gray-500">
+                        <span className="text-[14px]">#라면</span>
+                        <span className="text-[14px]">#라면</span>
+                        <span className="text-[14px]">#라면</span>
+                      </div>
+                      <span>{item?.RCP_NM}</span>
                     </div>
                   </div>
                 </div>

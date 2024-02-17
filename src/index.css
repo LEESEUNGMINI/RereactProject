@@ -21,6 +21,69 @@ body {
 #Menu_carousel Button{
   display: none
 }
+#Grid_div {
+  display: grid;
+  padding: 10px;
+  grid-template-columns: repeat(4, 1fr); /* 4개의 열을 1:1 비율로 배치합니다. */
+ grid-template-areas: 
+ 'a a b c'
+ 'a a d d'
+ 'e f d d'
+ ;
+  grid-gap: 10px; /* 그리드 간격을 설정합니다. */
+}
+
+#Grid_div .divs {
+ /* 배경색을 설정합니다. */
+  padding: 20px;
+  text-align: center;
+}
+
+/* 각각의 아이템에 대한 스타일을 지정합니다. */
+#Grid_div .divs:nth-child(1) {
+grid-area: a;
+
+}
+#Grid_div .divs:nth-child(2) {
+grid-area: b;
+}
+#Grid_div .divs:nth-child(3) {
+grid-area: c;
+}
+#Grid_div .divs:nth-child(4) {
+grid-area: d;
+}
+#Grid_div .divs:nth-child(5) {
+grid-area: e;
+}
+#Grid_div .divs:nth-child(6) {
+grid-area: f;
+}
+
+
+
+.text-1{
+  background-color: #ffed93;
+  height: 20%;
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+}
+.text-1 div{
+font-size: 30px;
+}
+.text-4{
+  background-color: #ffed93;
+  height: 20%;
+  border-radius: 0 0 20px 20px;
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+}
+.text-4 div{
+font-size: 30px;
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
