@@ -220,7 +220,7 @@ function App() {
       </section>
       {/* 두번쨰 섹션 */}
       <section className="w-full mt-16 h-[400px] bg-[url('./Belner.jpg')] bg-cover bg-center flex justify-center items-center">
-        <div className="text-center pb-24">
+        <div className="text-center pb-10">
           <h2 className="text-red-500 text-5xl font-bold mb-4">
             요리를 더 쉽게!
           </h2>
@@ -366,14 +366,14 @@ function App() {
         </div>
       </section>
       <section className="w-full mt-16 h-[400px] bg-[url('./Belner.jpg')] bg-cover bg-center flex justify-center items-center">
-        <div className="text-center pb-24">
+        <div className="text-center pb-10">
           <h2 className="text-red-500 text-5xl font-bold mb-4">
             CcooK만의 각종 레시피들로 더 재미있게!
           </h2>
           <p className="text-black text-2xl font-semibold mb-6">
             모든 레시피와 각종 요리 재료소개
           </p>
-          <p className="text-black text-3xl font-bold mb-6">
+          <p className="text-black text-3xl font-bold">
             바로 구경하러 가시겠어요?
           </p>
           <Button variant="outline-dark" style={{ fontWeight: "bold" }}>
