@@ -219,7 +219,7 @@ function App() {
         </div>
       </section>
       {/* 두번쨰 섹션 */}
-      <section className="w-full mt-16 h-[400px] bg-[url('https://ottogi.okitchen.co.kr/images/main/section02_bg.jpg')] bg-cover bg-center flex justify-center items-center">
+      <section className="w-full mt-16 h-[400px] bg-[url('./Belner.jpg')] bg-cover bg-center flex justify-center items-center">
         <div className="text-center pb-24">
           <h2 className="text-red-500 text-5xl font-bold mb-4">
             요리를 더 쉽게!
@@ -250,7 +250,7 @@ function App() {
             {/* 아래 그리드 */}
 
             <div className="grid grid-cols-4 gap-4">
-              {Data?.slice(60, 68).map((item, index) => (
+              {Data?.slice(40, 48).map((item, index) => (
                 <div
                   key={index}
                   className="flex flex-col items-center relative"
@@ -280,20 +280,17 @@ function App() {
         </div>
       </section>
       {/* 네번째 섹션 */}
-      <section>
+      <section className="mb-20 mt-10 h-[900px] bg-[url('./Belner2.jpg')] bg-cover bg-center">
         {/* 타이틀 */}
-        <div className="w-full h-80  flex flex-col justify-center items-center">
+        <div className="w-full h-56  flex flex-col justify-center items-center bg-white">
           <h1 className="font-bold mb-6">Ccook 추천 간편식</h1>
           <hr className="w-9  border-t-4 border-black" />
-          <p className="mb-8 font-semibold text-orange-400">
+          <p className=" font-semibold text-orange-400">
             Ccook만의 간편식이 근사한 요리가 되는 팁을 공개합니다.
           </p>
         </div>
         {/* Carousel 컴포넌트 */}
-        <Carousel
-          id="Menu_carousel"
-          className="bg-[url('https://ottogi.okitchen.co.kr/images/main/section04_bg.jpg')]"
-        >
+        <Carousel id="Menu_carousel" className="">
           {chunkedData.map((chunk, index) => (
             <Carousel.Item key={index}>
               {/* 한 번에 4개씩 이미지를 보여줄 수 있도록 각각의 아이템에서 4개의 이미지를 보여줍니다. */}
@@ -322,6 +319,45 @@ function App() {
             </Carousel.Item>
           ))}
         </Carousel>
+      </section>
+      {/* 다섯번째 섹션 */}
+      <section>
+        <div className="w-full h-auto flex justify-center mb-[40px]">
+          <div className="w-full h-full max-w-[1200px] ">
+            {/* 타이틀 */}
+            <div className="w-full h-40  flex flex-col justify-center items-center">
+              <h1 className="font-bold mb-6">추천레시피</h1>
+              <hr className="w-9  border-t-4 border-black" />
+              <p className="mb-8 font-semibold text-orange-400">
+                Ccook이 소개하는 레시피로 최고의 요리를 만들어보세요
+              </p>
+            </div>
+            {/* 아래 그리드 */}
+
+            <div className="grid grid-cols-4 gap-4">
+              {Data?.slice(80, 88).map((item, index) => (
+                <div
+                  key={index}
+                  className="flex flex-col items-center relative"
+                >
+                  {/* 이미지 */}
+                  <img
+                    src={item?.ATT_FILE_NO_MAIN} // 이미지 소스
+                    alt={item?.RCP_NM} // 대체 텍스트
+                    className="w-full h-[240px] rounded-lg object-cover object-center "
+                  />
+
+                  {/* 소개 */}
+                  <div className="w-full">
+                    <div className="mt-3 font-bold text-[20px]">
+                      {item?.RCP_NM}
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
       </section>
       {/* 푸터 위에있는 작은 바  */}
       <div className="w-full h-20 flex justify-center bg-[#A20A1F] shadow-md">
