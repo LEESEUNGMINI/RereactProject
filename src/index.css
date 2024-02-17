@@ -61,24 +61,42 @@ grid-area: f;
 }
 
 
-
 .text-1{
   background-color: #ffed93;
-  height: 20%;
+  height: 140px;
   display: flex;
-  justify-content: center;
-  padding: 10px;
+padding: 20px;
 }
-.text-1 div{
-font-size: 30px;
+.text-2{
+  text-align: start;
+  display: flex;
+padding: 20px;
+}
+.text-3{
+  text-align: start;
+  display: flex;
+padding: 20px;
 }
 .text-4{
   background-color: #ffed93;
-  height: 20%;
-  border-radius: 0 0 20px 20px;
+  height: 140px;
   display: flex;
-  justify-content: center;
-  padding: 10px;
+padding: 20px;
+}
+.text-5{
+
+  display: flex;
+  text-align: start;
+padding: 20px;
+}
+.text-6{
+
+  text-align: start;
+  display: flex;
+padding: 20px;
+}
+.text-1 div{
+font-size: 30px;
 }
 .text-4 div{
 font-size: 30px;

@@ -335,7 +335,7 @@ function App() {
             {/* 아래 그리드 */}
 
             <div id="Grid_div">
-              {Data?.slice(97, 103).map((item, index) => (
+              {Data?.slice(103, 109).map((item, index) => (
                 <div
                   key={index}
                   className={`divs div-${
@@ -351,11 +351,10 @@ function App() {
 
                   {/* 소개 */}
                   <div className={`w-full texts text-${index + 1}`}>
-                    <div className="mt-3 font-bold text-[20px]">
-                      <div className="space-x-3 text-gray-500">
-                        <span className="text-[14px]">#라면</span>
-                        <span className="text-[14px]">#라면</span>
-                        <span className="text-[14px]">#라면</span>
+                    <div className="font-bold text-[24px]">
+                      <div className="space-x-3 text-gray-500 font-semibold flex">
+                        <span className="text-[16px]">#{item.RCP_PAT2}</span>
+                        <span className="text-[16px]">#{item.RCP_WAY2}</span>
                       </div>
                       <span>{item?.RCP_NM}</span>
                     </div>
@@ -364,6 +363,22 @@ function App() {
               ))}
             </div>
           </div>
+        </div>
+      </section>
+      <section className="w-full mt-16 h-[400px] bg-[url('./Belner.jpg')] bg-cover bg-center flex justify-center items-center">
+        <div className="text-center pb-24">
+          <h2 className="text-red-500 text-5xl font-bold mb-4">
+            CcooK만의 각종 레시피들로 더 재미있게!
+          </h2>
+          <p className="text-black text-2xl font-semibold mb-6">
+            모든 레시피와 각종 요리 재료소개
+          </p>
+          <p className="text-black text-3xl font-bold mb-6">
+            바로 구경하러 가시겠어요?
+          </p>
+          <Button variant="outline-dark" style={{ fontWeight: "bold" }}>
+            쇼핑몰 구경하기
+          </Button>
         </div>
       </section>
       {/* 푸터 위에있는 작은 바  */}
