@@ -18,88 +18,88 @@ body {
   background-color: red;
   color: white;
 }
-#Menu_carousel Button{
-  display: none
+#Menu_carousel Button {
+  display: none;
 }
 #Grid_div {
   display: grid;
   padding: 10px;
   grid-template-columns: repeat(4, 1fr); /* 4개의 열을 1:1 비율로 배치합니다. */
- grid-template-areas: 
- 'a a b c'
- 'a a d d'
- 'e f d d'
- ;
-  grid-gap: 10px; /* 그리드 간격을 설정합니다. */
+  grid-template-areas:
+    "a a b c"
+    "a a d d"
+    "e f d d";
+  grid-gap: 0px; /* 그리드 간격을 설정합니다. */
 }
 
 #Grid_div .divs {
- /* 배경색을 설정합니다. */
-  padding: 20px;
+  /* 배경색을 설정합니다. */
+  padding: 10px;
   text-align: center;
 }
 
 /* 각각의 아이템에 대한 스타일을 지정합니다. */
+#Grid_div img:nth-of-type(1) {
+  border-radius: 20px 20px 0px 0;
+}
 #Grid_div .divs:nth-child(1) {
-grid-area: a;
-
+  grid-area: a;
 }
 #Grid_div .divs:nth-child(2) {
-grid-area: b;
+  grid-area: b;
 }
 #Grid_div .divs:nth-child(3) {
-grid-area: c;
+  grid-area: c;
 }
 #Grid_div .divs:nth-child(4) {
-grid-area: d;
+  grid-area: d;
 }
 #Grid_div .divs:nth-child(5) {
-grid-area: e;
+  grid-area: e;
 }
 #Grid_div .divs:nth-child(6) {
-grid-area: f;
+  grid-area: f;
 }
 
-
-.text-1{
+.text-1 {
   background-color: #ffed93;
   height: 140px;
   display: flex;
-padding: 20px;
+  padding: 20px;
+  border-radius: 0 0 20px 10px;
 }
-.text-2{
+.text-2 {
   text-align: start;
   display: flex;
-padding: 20px;
+  padding: 20px;
 }
-.text-3{
+.text-3 {
   text-align: start;
   display: flex;
-padding: 20px;
+  padding: 20px;
 }
-.text-4{
+.text-4 {
   background-color: #ffed93;
   height: 140px;
   display: flex;
-padding: 20px;
+  padding: 20px;
+  border-radius: 0 0 20px 10px;
 }
-.text-5{
-
+.text-5 {
   display: flex;
   text-align: start;
-padding: 20px;
+  padding: 20px;
 }
-.text-6{
-
+.text-6 {
   text-align: start;
   display: flex;
-padding: 20px;
+  padding: 20px;
 }
-.text-1 div{
-font-size: 30px;
+.text-1 div {
+  font-size: 30px;
 }
-.text-4 div{
-font-size: 30px;
+.text-4 div {
+  font-size: 30px;
 }
 
 @tailwind base;

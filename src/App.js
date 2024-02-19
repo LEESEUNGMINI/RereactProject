@@ -20,7 +20,7 @@ function App() {
   };
 
   // 데이터를 4개씩 묶어서 배열로 만듭니다.
-  const chunkedData = chunkArray(Data, 4);
+  const chunkedData = chunkArray(Data, 5);
   return (
     <div>
       <header className="w-full h-[130px] bg-[#CD2032] flex justify-center">
@@ -37,15 +37,16 @@ function App() {
                 className="w-full h-full bg-[rgba(255,255,255,0.1)] placeholder-white text-white outline-none "
               />
             </div>
-            <div className="flex space-x-4 h-full items-center text-white">
-              <p>#맛집레시피</p>
-              <p>#맛있는</p>
+            <div className="flex space-x-4 h-full items-center text-white font-bold text-[20px]">
+              <p className=" cursor-pointer">추천 레시피</p>
+              <p className=" cursor-pointer">추천 간편식</p>
+              <p className=" cursor-pointer">이색 추천 레시피</p>
             </div>
           </div>
         </div>
       </header>
       {/* 헤더밑에있는 흰색바 */}
-      <div className="w-full h-20 flex justify-center bg-slate-50 shadow-md">
+      <div className="w-full h-20 flex justify-center bg-slate-50 shadow-md pr-10">
         <div className="w-full max-w-[1200px] h-16 font-bold  flex space-x-9 items-center p-5 text-[20px] text-gray-600">
           <div className=" border-black w-[130px] ">
             <p className="hover:text-[#CD2032] duration-200 cursor-pointer">
@@ -62,6 +63,20 @@ function App() {
               계량 팁
             </p>
           </div>
+        </div>
+        <div className="flex justify-center items-center space-x-5">
+          <Button
+            variant="outline-danger"
+            className="mb-2  hover:text-white transition duration-300 p-2 rounded-lg"
+          >
+            #자취생들을 위한
+          </Button>
+          <Button
+            variant="outline-danger"
+            className="mb-2  hover:text-white transition duration-300 p-2 rounded-lg"
+          >
+            #아이들을 위한
+          </Button>
         </div>
       </div>
       {/* 메인캐러셀 상단 */}
@@ -294,7 +309,7 @@ function App() {
           {chunkedData.map((chunk, index) => (
             <Carousel.Item key={index}>
               {/* 한 번에 4개씩 이미지를 보여줄 수 있도록 각각의 아이템에서 4개의 이미지를 보여줍니다. */}
-              <div className="flex justify-center space-x-12">
+              <div className="flex justify-center space-x-8 p-4 ">
                 {chunk.map((item, itemIndex) => (
                   <div
                     key={itemIndex}
@@ -304,7 +319,7 @@ function App() {
                     <img
                       src={item?.ATT_FILE_NO_MAIN} // 이미지 소스
                       alt={item?.RCP_NM} // 대체 텍스트
-                      className="w-[500px] h-[400px] rounded-lg object-cover object-center"
+                      className="w-[500px] h-[400px] rounded-lg object-cover object-center shadow-md shadow-gray-400 "
                     />
                     {/* 소개 */}
                     <div className="flex space-x-4 mt-10 font-semibold text-gray-500">
@@ -336,7 +351,7 @@ function App() {
             {/* 아래 그리드 */}
 
             <div id="Grid_div">
-              {Data?.slice(103, 109).map((item, index) => (
+              {Data?.slice(58, 64).map((item, index) => (
                 <div
                   key={index}
                   className={`divs div-${
