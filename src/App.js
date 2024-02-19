@@ -326,12 +326,13 @@ function App() {
           <div className="w-full h-full max-w-[1200px] ">
             {/* 타이틀 */}
             <div className="w-full h-40  flex flex-col justify-center items-center">
-              <h1 className="font-bold mb-6">이색 추천레시피</h1>
+              <h1 className="font-bold mb-6">이색 추천 레시피</h1>
               <hr className="w-9  border-t-4 border-black" />
               <p className="mb-8 font-semibold text-orange-400">
                 Ccook이 소개하는 이색적인 레시피로 또 다른 요리에 도전해보세요
               </p>
             </div>
+            {/* <div></div> */}
             {/* 아래 그리드 */}
 
             <div id="Grid_div">
