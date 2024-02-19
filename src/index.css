@@ -46,23 +46,23 @@ body {
   grid-area: a;
 }
 #Grid_div .divs:nth-child(2) {
-  grid-area: b;
+  grid-area: e;
 }
 #Grid_div .divs:nth-child(3) {
-  grid-area: c;
+  grid-area: f;
 }
 #Grid_div .divs:nth-child(4) {
   grid-area: d;
 }
 #Grid_div .divs:nth-child(5) {
-  grid-area: e;
+  grid-area: b;
 }
 #Grid_div .divs:nth-child(6) {
-  grid-area: f;
+  grid-area: c;
 }
 
 .text-1 {
-  background-color: #ffed93;
+  background-color: #ebc595;
   height: 140px;
   display: flex;
   padding: 20px;
@@ -79,7 +79,7 @@ body {
   padding: 20px;
 }
 .text-4 {
-  background-color: #ffed93;
+  background-color: #dbcabb;
   height: 140px;
   display: flex;
   padding: 20px;

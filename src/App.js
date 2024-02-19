@@ -37,7 +37,7 @@ function App() {
                 className="w-full h-full bg-[rgba(255,255,255,0.1)] placeholder-white text-white outline-none "
               />
             </div>
-            <div className="flex space-x-4 h-full items-center text-white font-bold text-[20px]">
+            <div className="flex space-x-4 h-full items-center text-white font-bold text-[20px] hidden xl:flex ">
               <p className=" cursor-pointer">추천 레시피</p>
               <p className=" cursor-pointer">추천 간편식</p>
               <p className=" cursor-pointer">이색 추천 레시피</p>
@@ -46,7 +46,7 @@ function App() {
         </div>
       </header>
       {/* 헤더밑에있는 흰색바 */}
-      <div className="w-full h-20 flex justify-center bg-slate-50 shadow-md pr-10">
+      <div className="w-full h-20 flex justify-center bg-slate-50 shadow-md pr-10 hidden xl:flex">
         <div className="w-full max-w-[1200px] h-16 font-bold  flex space-x-9 items-center p-5 text-[20px] text-gray-600">
           <div className=" border-black w-[130px] ">
             <p className="hover:text-[#CD2032] duration-200 cursor-pointer">
@@ -141,13 +141,13 @@ function App() {
         </Carousel.Item>
       </Carousel>
       {/* 첫번쨰 섹션 */}
-      <section className="w-full h-[800px] flex justify-center">
+      <section className="w-full h-[1000px] flex justify-center">
         <div
           id="container"
-          className="w-full h-full max-w-[1200px]  p-10 pt-24 flex justify-center"
+          className="w-full h-full max-w-[1200px]  p-10 pt-48 justify-center xl:flex"
         >
           {/* 왼쪽 자식 */}
-          <div className="w-1/2 flex flex-col items-center bg-white shadow-lg rounded-l-lg p-6 pt-16 ">
+          <div className="w-full flex flex-col items-center bg-white shadow-lg rounded-l-lg p-6 pt-16 xl:1/2 ">
             <h1 className="font-bold mb-2">이건 어때요?</h1>
             <h1 className="font-bold mb-2">인기 검색어</h1>
             <hr className="w-9 mb-6 border-t-4 border-black" />
@@ -212,7 +212,7 @@ function App() {
             </div>
           </div>
           {/* 오른쪽 자식 */}
-          <div className="w-1/2 flex justify-center items-center shadow-lg rounded-r-lg overflow-hidden">
+          <div className="w-full flex justify-center items-center shadow-lg rounded-r-lg overflow-hidden xl:1/2 ">
             <div className="w-full h-full bg-[url('https://cdn.pixabay.com/photo/2019/01/25/21/36/spaghetti-3955377_1280.jpg')] bg-cover bg-center flex flex-col justify-center items-center">
               <div className="text-white p-4  ">
                 <div className="border-8 border-white p-4 relative rounded-xl">
@@ -234,17 +234,19 @@ function App() {
         </div>
       </section>
       {/* 두번쨰 섹션 */}
-      <section className="w-full mt-16 h-[400px] bg-[url('./Belner.jpg')] bg-cover bg-center flex justify-center items-center">
+      <section className="w-full mt-32 h-[250px] bg-[url('./Belner.jpg')] bg-cover bg-center flex justify-center items-center xl:h-[400px]">
         <div className="text-center pb-10">
-          <h2 className="text-red-500 text-5xl font-bold mb-4">
+          <h2 className="text-red-500 text-3xl font-bold mb-3 xl:5xl ">
             요리를 더 쉽게!
           </h2>
-          <p className="text-black text-2xl font-semibold mb-6">
+          <span className="text-black text-xl xl:text-2xl font-semibold  ">
             CcooK의 각종 소스들로 모든 레시피를 보다
-          </p>
-          <p className="text-black text-3xl font-bold mb-6">
+          </span>
+          <br />
+          <span className="text-black text-2xl xl:text-3xl font-bold mb-4 xl:mb-10 inline-block">
             쉽게, 빠르게, 맛있게
-          </p>
+          </span>
+          <br />
           <Button variant="outline-dark" style={{ fontWeight: "bold" }}>
             레시피 구경하기
           </Button>
@@ -252,7 +254,7 @@ function App() {
       </section>
       {/* 세번째 섹션 */}
       <section>
-        <div className="w-full h-auto flex justify-center mb-[40px]">
+        <div className="w-full h-auto flex justify-center mb-[40px] mt-16">
           <div className="w-full h-full max-w-[1200px] ">
             {/* 타이틀 */}
             <div className="w-full h-40  flex flex-col justify-center items-center">
@@ -295,7 +297,7 @@ function App() {
         </div>
       </section>
       {/* 네번째 섹션 */}
-      <section className="mb-20 mt-10 h-[900px] bg-[url('./Belner2.jpg')] bg-cover bg-center">
+      <section className="mb-20 mt-32 h-[900px] bg-[url('./Belner2.jpg')] bg-cover bg-center">
         {/* 타이틀 */}
         <div className="w-full h-56  flex flex-col justify-center items-center bg-white">
           <h1 className="font-bold mb-6">Ccook 추천 간편식</h1>
@@ -337,7 +339,7 @@ function App() {
       </section>
       {/* 다섯번째 섹션 */}
       <section>
-        <div className="w-full h-auto flex justify-center mb-[40px]">
+        <div className="w-full h-auto flex justify-center mb-[40px] mt-32">
           <div className="w-full h-full max-w-[1200px] ">
             {/* 타이틀 */}
             <div className="w-full h-40  flex flex-col justify-center items-center">
@@ -381,17 +383,19 @@ function App() {
           </div>
         </div>
       </section>
-      <section className="w-full mt-16 h-[400px] bg-[url('./Belner.jpg')] bg-cover bg-center flex justify-center items-center">
-        <div className="text-center pb-10">
-          <h2 className="text-red-500 text-5xl font-bold mb-4">
+      <section className="w-full mt-48 h-[300px] bg-[url('https://ottogi.okitchen.co.kr/images/main/book_banner.jpg')] bg-cover bg-center flex justify-center items-center">
+        <div className="text-center">
+          <h2 className="text-red-500 text-4xl font-bold mb-3 ">
             CcooK만의 각종 레시피들로 더 재미있게!
           </h2>
-          <p className="text-black text-2xl font-semibold mb-6">
+          <span className="text-black text-2xl text-[#aaaaaa]">
             모든 레시피와 각종 요리 재료소개
-          </p>
-          <p className="text-black text-3xl font-bold">
+          </span>
+          <br />
+          <span className="text-black text-3xl font-bold mb-10 inline-block">
             바로 구경하러 가시겠어요?
-          </p>
+          </span>
+          <br />
           <Button variant="outline-dark" style={{ fontWeight: "bold" }}>
             쇼핑몰 구경하기
           </Button>
