@@ -101,7 +101,56 @@ body {
 .text-4 div {
   font-size: 30px;
 }
-
+@media screen and (max-width: 768px) {
+  #Grid_div {
+    grid-template-areas:
+      "a a b b"
+      "c c d d "
+      "e e f f ";
+  }
+  .text-1 {
+    background-color: #dbcabb;
+    height: 140px;
+    display: flex;
+    padding: 20px;
+    border-radius: 0 0 20px 10px;
+  }
+  .text-2 {
+    background-color: #dbcabb;
+    height: 140px;
+    display: flex;
+    padding: 20px;
+    border-radius: 0 0 20px 10px;
+  }
+  .text-3 {
+    background-color: #dbcabb;
+    height: 140px;
+    display: flex;
+    padding: 20px;
+    border-radius: 0 0 20px 10px;
+  }
+  .text-4 {
+    background-color: #dbcabb;
+    height: 140px;
+    display: flex;
+    padding: 20px;
+    border-radius: 0 0 20px 10px;
+  }
+  .text-5 {
+    background-color: #dbcabb;
+    height: 140px;
+    display: flex;
+    padding: 20px;
+    border-radius: 0 0 20px 10px;
+  }
+  .text-6 {
+    background-color: #dbcabb;
+    height: 140px;
+    display: flex;
+    padding: 20px;
+    border-radius: 0 0 20px 10px;
+  }
+}
 @tailwind base;
 @tailwind components;
 @tailwind utilities;

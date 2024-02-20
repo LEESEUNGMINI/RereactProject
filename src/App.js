@@ -2,9 +2,9 @@ import { useQuery } from "react-query";
 import { expressTest } from "./api";
 import "bootstrap/dist/css/bootstrap.css";
 import { Button, Carousel } from "react-bootstrap"; // Bootstrap Carousel import
-import { FaInstagram } from "react-icons/fa";
-import { FaSquareFacebook } from "react-icons/fa6";
-import { CiYoutube } from "react-icons/ci";
+
+import Header from "./Component/Header";
+import Footer from "./Component/Footer";
 
 function App() {
   const { data } = useQuery("test", expressTest);
@@ -23,64 +23,8 @@ function App() {
   const chunkedData = chunkArray(Data, 5);
   return (
     <div>
-      <header className="w-full h-[130px] bg-[#CD2032] flex justify-center">
-        {/* Logo */}
-        <div className="w-full max-w-[1200px] h-full p-5">
-          <div className="h-full w-full flex justify-between items-center">
-            <div className="flex items-center text-white font-bold text-[30px]">
-              CcooK
-            </div>
-            <div className="w-[50%] h-[200%] flex items-center justify-center border-b-2">
-              <input
-                type="text"
-                placeholder="다양한 레시피를 검색해보세요!"
-                className="w-full h-full bg-[rgba(255,255,255,0.1)] placeholder-white text-white outline-none "
-              />
-            </div>
-            <div className="flex space-x-4 h-full items-center text-white font-bold text-[20px] hidden xl:flex ">
-              <p className=" cursor-pointer">추천 레시피</p>
-              <p className=" cursor-pointer">추천 간편식</p>
-              <p className=" cursor-pointer">이색 추천 레시피</p>
-            </div>
-          </div>
-        </div>
-      </header>
-      {/* 헤더밑에있는 흰색바 */}
-      <div className="w-full h-20 flex justify-center bg-slate-50 shadow-md pr-10 hidden xl:flex">
-        <div className="w-full max-w-[1200px] h-16 font-bold  flex space-x-9 items-center p-5 text-[20px] text-gray-600">
-          <div className=" border-black w-[130px] ">
-            <p className="hover:text-[#CD2032] duration-200 cursor-pointer">
-              인기 레시피
-            </p>
-          </div>
-          <div className=" border-black w-[140px] hover:text-[#CD2032] duration-200">
-            <p className="hover:text-[#CD2032] duration-200 cursor-pointer">
-              신규 레시피
-            </p>
-          </div>
-          <div className="w-[100px] hover:text-[#CD2032] duration-200">
-            <p className="hover:text-[#CD2032] duration-200 cursor-pointer">
-              계량 팁
-            </p>
-          </div>
-        </div>
-        <div className="flex justify-center items-center space-x-5">
-          <Button
-            variant="outline-danger"
-            className="mb-2  hover:text-white transition duration-300 p-2 rounded-lg"
-          >
-            #자취생들을 위한
-          </Button>
-          <Button
-            variant="outline-danger"
-            className="mb-2  hover:text-white transition duration-300 p-2 rounded-lg"
-          >
-            #아이들을 위한
-          </Button>
-        </div>
-      </div>
       {/* 메인캐러셀 상단 */}
-
+      <Header />
       <Carousel>
         <Carousel.Item>
           <div className="h-[710px] flex justify-center">
@@ -91,8 +35,12 @@ function App() {
             />
             <div className="w-full h-full max-w-[1200px] relative">
               <div className="absolute top-40 left-10  text-white">
-                <h3 className="text-6xl font-semibold mb-3">맛있고 든든하게</h3>
-                <h3 className="text-6xl font-bold mb-3">영양챙기기</h3>
+                <h3 className="xl:text-6xl text-5xl font-semibold mb-3">
+                  맛있고 든든하게
+                </h3>
+                <h3 className="xl:text-6xl text-5xl font-bold mb-3">
+                  영양챙기기
+                </h3>
                 <p className="text-lg mb-5">
                   Nulla vitae elit libero, a pharetra augue mollis interdum.
                 </p>
@@ -110,8 +58,12 @@ function App() {
             />
             <div className="w-full h-full max-w-[1200px] relative">
               <div className="absolute top-40 left-10  text-white">
-                <h3 className="text-6xl font-semibold mb-3">맛있고 든든하게</h3>
-                <h3 className="text-6xl font-bold mb-3">영양챙기기</h3>
+                <h3 className="xl:text-6xl text-5xl font-semibold mb-3">
+                  맛있고 든든하게
+                </h3>
+                <h3 className="xl:text-6xl text-5xl font-bold mb-3">
+                  영양챙기기
+                </h3>
                 <p className="text-lg mb-5">
                   Nulla vitae elit libero, a pharetra augue mollis interdum.
                 </p>
@@ -129,8 +81,12 @@ function App() {
             />
             <div className="w-full h-full max-w-[1200px] relative">
               <div className="absolute top-40 left-10  text-white">
-                <h3 className="text-6xl font-semibold mb-3">맛있고 든든하게</h3>
-                <h3 className="text-6xl font-bold mb-3">영양챙기기</h3>
+                <h3 className="xl:text-6xl text-5xl font-semibold mb-3">
+                  맛있고 든든하게
+                </h3>
+                <h3 className="xl:text-6xl text-5xl font-bold mb-3">
+                  영양챙기기
+                </h3>
                 <p className="text-lg mb-5">
                   Nulla vitae elit libero, a pharetra augue mollis interdum.
                 </p>
@@ -266,7 +222,7 @@ function App() {
             </div>
             {/* 아래 그리드 */}
 
-            <div className="grid grid-cols-4 gap-4">
+            <div className="grid xl:grid-cols-4 gap-4 md:grid-cols-2 p-4">
               {Data?.slice(40, 48).map((item, index) => (
                 <div
                   key={index}
@@ -297,7 +253,7 @@ function App() {
         </div>
       </section>
       {/* 네번째 섹션 */}
-      <section className="mb-20 mt-32 h-[900px] bg-[url('./Belner2.jpg')] bg-cover bg-center">
+      <section className="mb-20 mt-32 h-[900px] bg-[url('./Belner2.jpg')] bg-cover bg-center hidden xl:block">
         {/* 타이틀 */}
         <div className="w-full h-56  flex flex-col justify-center items-center bg-white">
           <h1 className="font-bold mb-6">Ccook 추천 간편식</h1>
@@ -339,7 +295,7 @@ function App() {
       </section>
       {/* 다섯번째 섹션 */}
       <section>
-        <div className="w-full h-auto flex justify-center mb-[40px] mt-32">
+        <div className="w-full h-auto flex justify-center mb-[40px] mt-32 p-4">
           <div className="w-full h-full max-w-[1200px] ">
             {/* 타이틀 */}
             <div className="w-full h-40  flex flex-col justify-center items-center">
@@ -349,7 +305,6 @@ function App() {
                 Ccook이 소개하는 이색적인 레시피로 또 다른 요리에 도전해보세요
               </p>
             </div>
-            {/* <div></div> */}
             {/* 아래 그리드 */}
 
             <div id="Grid_div">
@@ -369,12 +324,18 @@ function App() {
 
                   {/* 소개 */}
                   <div className={`w-full texts text-${index + 1}`}>
-                    <div className="font-bold text-[24px]">
+                    <div className="font-bold xl:text-[24px]w-full">
                       <div className="space-x-3 text-gray-500 font-semibold flex">
-                        <span className="text-[16px]">#{item.RCP_PAT2}</span>
-                        <span className="text-[16px]">#{item.RCP_WAY2}</span>
+                        <span className="xl:text-[16px] text-[14px]">
+                          #{item.RCP_PAT2}
+                        </span>
+                        <span className="xl:text-[16px] text-[14px]">
+                          #{item.RCP_WAY2}
+                        </span>
                       </div>
-                      <span>{item?.RCP_NM}</span>
+                      <span className="text-[16px] xl:text-[24px]">
+                        {item?.RCP_NM}
+                      </span>
                     </div>
                   </div>
                 </div>
@@ -383,16 +344,16 @@ function App() {
           </div>
         </div>
       </section>
-      <section className="w-full mt-48 h-[300px] bg-[url('https://ottogi.okitchen.co.kr/images/main/book_banner.jpg')] bg-cover bg-center flex justify-center items-center">
+      <section className="w-full mt-48 xl:h-[300px] h-[200px] bg-[url('https://ottogi.okitchen.co.kr/images/main/book_banner.jpg')] bg-cover bg-center flex justify-center items-center">
         <div className="text-center">
-          <h2 className="text-red-500 text-4xl font-bold mb-3 ">
+          <h2 className="text-red-500 xl:text-4xl text-2xl font-bold mb-3 ">
             CcooK만의 각종 레시피들로 더 재미있게!
           </h2>
-          <span className="text-black text-2xl text-[#aaaaaa]">
+          <span className=" xl:text-2xl text-[#aaaaaa]">
             모든 레시피와 각종 요리 재료소개
           </span>
           <br />
-          <span className="text-black text-3xl font-bold mb-10 inline-block">
+          <span className="text-black xl:text-3xl text-xl font-bold mb-10 inline-block">
             바로 구경하러 가시겠어요?
           </span>
           <br />
@@ -401,47 +362,7 @@ function App() {
           </Button>
         </div>
       </section>
-      {/* 푸터 위에있는 작은 바  */}
-      <div className="w-full h-20 flex justify-center bg-[#A20A1F] shadow-md">
-        <div className="w-full max-w-[1200px] h-16 font-bold  flex space-x-9 items-center p-5 text-[20px] text-white">
-          <div className=" border-black w-[130px] ">
-            <p className=" duration-200 cursor-pointer">인기 레시피</p>
-          </div>
-          <div className=" border-black w-[140px] duration-200">
-            <p className=" duration-200 cursor-pointer">신규 레시피</p>
-          </div>
-          <div className="w-[100px]  duration-200">
-            <p className=" duration-200 cursor-pointer">계량 팁</p>
-          </div>
-        </div>
-      </div>
-      {/* 푸터 */}
-      <footer className="w-full h-[130px] bg-[#CD2032] flex justify-center">
-        {/* Logo */}
-        <div className="w-full max-w-[1200px] h-full p-5">
-          <div className="h-full w-full flex justify-between items-center">
-            <div className="flex flex-col text-white font-bold text-[16px]">
-              <h6 className="font-bold">(주)CcooK</h6>
-              <h6>대구광역시 동구 화랑로 525 </h6>
-              <h6>Copyright ⓒ CcooK.,Ltd All Rights Reserved.</h6>
-            </div>
-
-            <div className="flex space-x-4 h-full items-center text-white text-[24px]">
-              <p>
-                <FaInstagram />
-              </p>
-              <p>
-                {" "}
-                <FaSquareFacebook />
-              </p>
-              <p>
-                {" "}
-                <CiYoutube />
-              </p>
-            </div>
-          </div>
-        </div>
-      </footer>
+      <Footer />
     </div>
   );
 }
