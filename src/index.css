@@ -3,9 +3,12 @@
 body {
   margin: 0;
   font-family: "Noto Sans KR", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
 .darken-image {
   filter: brightness(90%); /* 이미지 밝기 조절 */
 }

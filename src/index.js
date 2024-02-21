@@ -5,6 +5,8 @@ import App from "./App";
 import { QueryClient, QueryClientProvider } from "react-query";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Cucun from "./routes/Cucun";
+import NewResipy from "./routes/NewResipy";
+import GeaTip from "./routes/GeaTip";
 
 const router = createBrowserRouter([
   {
@@ -12,8 +14,16 @@ const router = createBrowserRouter([
     element: <App />,
   },
   {
-    path: "/chcun",
+    path: "/cucun",
     element: <Cucun />,
+  },
+  {
+    path: "/newresipy",
+    element: <NewResipy />,
+  },
+  {
+    path: "/geatip",
+    element: <GeaTip />,
   },
 ]);
 const queryClient = new QueryClient();

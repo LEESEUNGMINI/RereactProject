@@ -4,6 +4,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import { FiAlignRight } from "react-icons/fi";
 import { useState } from "react";
 import { Button } from "react-bootstrap";
+import { Link } from "react-router-dom";
 
 export default function Header() {
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -13,15 +14,18 @@ export default function Header() {
   const closeButton = () => {
     setMobileOpen(false);
   };
+
   return (
     <>
       <header className="w-full h-[130px] bg-[#CD2032] flex justify-center">
         {/* Logo */}
         <div className="w-full max-w-[1200px] h-full p-5">
           <div className="h-full w-full flex justify-between items-center">
-            <div className="flex items-center text-white font-bold text-[30px]">
-              CcooK
-            </div>
+            <Link to="/" className=" no-underline">
+              <div className="flex items-center text-white font-bold text-[30px]">
+                CcooK
+              </div>
+            </Link>
             <div className="w-[50%] h-[200%] items-center justify-center border-b-2 hidden lg:flex">
               <input
                 type="text"
@@ -33,9 +37,17 @@ export default function Header() {
               id="Hidden_div"
               className=" space-x-4 h-full items-center text-white font-bold text-[20px] hidden xl:flex "
             >
-              <p className=" cursor-pointer">추천 레시피</p>
-              <p className=" cursor-pointer">추천 간편식</p>
-              <p className=" cursor-pointer">이색 추천 레시피</p>
+              <Link to="#" className="text-white no-underline">
+                {" "}
+                <p className=" cursor-pointer">추천 레시피</p>
+              </Link>
+              <Link to="/cucun" className="text-white no-underline">
+                {" "}
+                <p className=" cursor-pointer">추천 간편식</p>{" "}
+              </Link>
+              <Link to="/cucun" className="text-white no-underline">
+                <p className=" cursor-pointer">이색 추천 레시피</p>
+              </Link>
             </div>
             <button
               id="main_button"
@@ -59,9 +71,15 @@ export default function Header() {
                   >
                     <IoClose />
                   </motion.div>
-                  <p className=" cursor-pointer">추천 레시피</p>
-                  <p className=" cursor-pointer">추천 간편식</p>
-                  <p className=" cursor-pointer">이색 추천 레시피</p>
+                  <Link to="/cucun" className="text-black no-underline">
+                    <p className=" cursor-pointer">인기 레시피</p>
+                  </Link>
+                  <Link to="/newresipy" className="text-black no-underline">
+                    <p className=" cursor-pointer">신규 레시피</p>
+                  </Link>
+                  <Link to="/geatip" className="text-black no-underline">
+                    <p className=" cursor-pointer">계량 팁 </p>
+                  </Link>
                 </motion.div>
               )}
             </AnimatePresence>
@@ -71,19 +89,26 @@ export default function Header() {
       <div className="w-full h-20 justify-center bg-slate-50 shadow-md pr-10 hidden xl:flex">
         <div className="w-full max-w-[1200px] h-16 font-bold  flex space-x-9 items-center p-5 text-[20px] text-gray-600">
           <div className=" border-black w-[130px] ">
-            <p className="hover:text-[#CD2032] duration-200 cursor-pointer">
-              인기 레시피
-            </p>
+            <Link to="/cucun" className="text-black no-underline">
+              <p className="hover:text-[#CD2032] duration-200 cursor-pointer">
+                인기 레시피
+              </p>
+            </Link>
           </div>
           <div className=" border-black w-[140px] hover:text-[#CD2032] duration-200">
-            <p className="hover:text-[#CD2032] duration-200 cursor-pointer">
-              신규 레시피
-            </p>
+            <Link to="/newresipy" className="text-black no-underline">
+              <p className="hover:text-[#CD2032] duration-200 cursor-pointer">
+                신규 레시피
+              </p>
+            </Link>
           </div>
+
           <div className="w-[100px] hover:text-[#CD2032] duration-200">
-            <p className="hover:text-[#CD2032] duration-200 cursor-pointer">
-              계량 팁
-            </p>
+            <Link to="/geatip" className="text-black no-underline">
+              <p className="hover:text-[#CD2032] duration-200 cursor-pointer">
+                계량 팁
+              </p>
+            </Link>
           </div>
         </div>
         <div className="flex justify-center items-center space-x-5">

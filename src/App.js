@@ -209,7 +209,7 @@ function App() {
         </div>
       </section>
       {/* 세번째 섹션 */}
-      <section>
+      <section id="third_section">
         <div className="w-full h-auto flex justify-center mb-[40px] mt-16">
           <div className="w-full h-full max-w-[1200px] ">
             {/* 타이틀 */}
@@ -253,7 +253,10 @@ function App() {
         </div>
       </section>
       {/* 네번째 섹션 */}
-      <section className="mb-20 mt-32 h-[900px] bg-[url('./Belner2.jpg')] bg-cover bg-center hidden xl:block">
+      <section
+        id="four_section"
+        className="mb-20 mt-32 h-[900px] bg-[url('./Belner2.jpg')] bg-cover bg-center hidden xl:block"
+      >
         {/* 타이틀 */}
         <div className="w-full h-56  flex flex-col justify-center items-center bg-white">
           <h1 className="font-bold mb-6">Ccook 추천 간편식</h1>
@@ -294,7 +297,7 @@ function App() {
         </Carousel>
       </section>
       {/* 다섯번째 섹션 */}
-      <section>
+      <section id="five_section">
         <div className="w-full h-auto flex justify-center mb-[40px] mt-32 p-4">
           <div className="w-full h-full max-w-[1200px] ">
             {/* 타이틀 */}
