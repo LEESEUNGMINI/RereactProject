@@ -90,8 +90,76 @@ export default function GeaTip() {
               </div>
             </div>
           </div>
-          <div className="grid xl:grid-cols-4 gap-4 md:grid-cols-2 p-4">
-            <div></div>
+          <hr className="mt-32 mb-32" />
+          <div className="flex flex-col items-center">
+            <img
+              src="https://ottogi.okitchen.co.kr/images/category/tip_icon03.gif"
+              alt=""
+            />
+            <h2 className=" text-red-500 font-bold mb-10">재료별 분량</h2>
+            <h3>자주 쓰는 재료들의 무게가 궁금해요!</h3>
+            <span className="mb-10 text-gray-500">
+              - 사진에 담긴 재료의 양을 참고하여 눈대중으로 분량을 재어봅시다.
+            </span>
+          </div>
+          {/* 그리드 4개 */}
+          <div className="grid xl:grid-cols-4 gap-4 md:grid-cols-3 p-4 mb-32">
+            <div>
+              <img
+                src="https://ottogi.okitchen.co.kr/images/category/tip06.jpg"
+                alt=""
+              />
+              <h4>양파(1/4개=50g)</h4>
+            </div>
+            <div>
+              <img
+                src="https://ottogi.okitchen.co.kr/images/category/tip10.jpg"
+                alt=""
+              />
+              <h4>마늘(1쪽=5g)</h4>
+            </div>
+            <div>
+              <img
+                src="https://ottogi.okitchen.co.kr/images/category/tip11.jpg"
+                alt=""
+              />
+              <h4>생강(1톨 = 약 15g)</h4>
+            </div>
+            <div>
+              <img
+                src="https://ottogi.okitchen.co.kr/images/category/tip09.jpg"
+                alt=""
+              />
+              <h4>대파 흰 부분(1대 = 약15cm)</h4>
+            </div>
+            <div>
+              <img
+                src="https://ottogi.okitchen.co.kr/images/category/tip08.jpg"
+                alt=""
+              />
+              <h4>당근(1/2개=약100g)</h4>
+            </div>
+            <div>
+              <img
+                src="https://ottogi.okitchen.co.kr/images/category/tip07.jpg"
+                alt=""
+              />
+              <h4>무(1토막=약150g)</h4>
+            </div>
+            <div>
+              <img
+                src="https://ottogi.okitchen.co.kr/images/category/tip05.jpg"
+                alt=""
+              />
+              <h4>애호박(1/2개=약150g)</h4>
+            </div>
+            <div>
+              <img
+                src="https://ottogi.okitchen.co.kr/images/category/tip12.jpg"
+                alt=""
+              />
+              <h4>돼지고기(1토막=약200g)</h4>
+            </div>
           </div>
         </div>
       </div>
