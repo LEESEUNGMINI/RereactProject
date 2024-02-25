@@ -5,9 +5,17 @@ import { Button, Carousel } from "react-bootstrap"; // Bootstrap Carousel import
 
 import Header from "./Component/Header";
 import Footer from "./Component/Footer";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
-function App() {
+function App({ props }) {
+  const navigate = useNavigate();
+
+  const onClickCucunItem = () => {
+    navigate(`/cucun/${props.RCP_NM}`, {
+      state: props,
+    });
+  };
+
   const { data } = useQuery("test", expressTest);
   const Data = data?.COOKRCP01.row;
   console.log(Data);
@@ -34,6 +42,7 @@ function App() {
               src="https://ottogi.okitchen.co.kr/pds/upfile/2020-08-23_214060951[27].jpg"
               alt="First slide"
             />
+
             <div className="w-full h-full max-w-[1200px] relative">
               <div className="absolute top-40 left-10  text-white">
                 <h3 className="xl:text-6xl text-5xl font-semibold mb-3">
@@ -281,11 +290,17 @@ function App() {
                     className="flex flex-col items-center relative"
                   >
                     {/* 이미지 */}
-                    <img
-                      src={item?.ATT_FILE_NO_MAIN} // 이미지 소스
-                      alt={item?.RCP_NM} // 대체 텍스트
-                      className="w-[500px] h-[400px] rounded-lg object-cover object-center shadow-md shadow-gray-400 "
-                    />
+                    <Link
+                      to={`/cucun/${item?.RCP_NM}`}
+                      state={{ item }}
+                      className="w-full cursor-pointer z-10"
+                    >
+                      <img
+                        src={item?.ATT_FILE_NO_MAIN} // 이미지 소스
+                        alt={item?.RCP_NM} // 대체 텍스트
+                        className="w-[500px] h-[400px] rounded-lg object-cover object-center shadow-md shadow-gray-400 hover:scale-105 transition-transform duration-300"
+                      />
+                    </Link>
                     {/* 소개 */}
                     <div className="flex space-x-4 mt-10 font-semibold text-gray-500">
                       <span>#{item?.RCP_PAT2}</span>
@@ -324,11 +339,17 @@ function App() {
                 >
                   {/* 이미지 */}
                   <div className="w-full overflow-hidden">
-                    <img
-                      src={item?.ATT_FILE_NO_MAIN} // 이미지 소스
-                      alt={item?.RCP_NM} // 대체 텍스트
-                      className="w-full h-[auto] object-cover object-center hover:scale-105 transition-transform duration-300 cursor-pointer "
-                    />
+                    <Link
+                      to={`/cucun/${item?.RCP_NM}`}
+                      state={{ item }}
+                      className="w-full cursor-pointer z-10"
+                    >
+                      <img
+                        src={item?.ATT_FILE_NO_MAIN} // 이미지 소스
+                        alt={item?.RCP_NM} // 대체 텍스트
+                        className="w-full h-[auto] object-cover object-center hover:scale-105 transition-transform duration-300 cursor-pointer "
+                      />
+                    </Link>
                   </div>
 
                   {/* 소개 */}
