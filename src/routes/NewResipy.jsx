@@ -5,7 +5,11 @@ import { useQuery } from "react-query";
 import { expressTest } from "../api";
 import { Pagination } from "@mui/material";
 
+
 export default function Cucun() {
+  // 네비게이션
+
+
   const [currentPage, setCurrentPage] = useState(1); // 현재 페이지 상태 추가
   const { data } = useQuery("test", expressTest);
   const Data = data?.COOKRCP01.row;
