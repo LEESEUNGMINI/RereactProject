@@ -46,15 +46,23 @@ export default function Footer() {
 
             <div className="flex space-x-4 h-full items-center text-white text-[24px]">
               <p>
+                <Link to="https://www.instagram.com/" className="text-white">
                 <FaInstagram />
+                </Link>
               </p>
               <p>
                 {" "}
+                <Link to="https://www.facebook.com/?locale=ko_KR"  className="text-white">
+                  
                 <FaSquareFacebook />
+                </Link>
               </p>
               <p>
                 {" "}
+                <Link to="https://www.youtube.com/"  className="text-white">
+
                 <CiYoutube />
+                </Link>
               </p>
             </div>
           </div>
