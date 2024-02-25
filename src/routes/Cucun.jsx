@@ -1,13 +1,29 @@
-import React from "react";
+import React, { useState } from "react";
 import Header from "../Component/Header";
 import Footer from "../Component/Footer";
 import { useQuery } from "react-query";
 import { expressTest } from "../api";
+import { Pagination } from "@mui/material";
 
 export default function Cucun() {
+  const [currentPage, setCurrentPage] = useState(1); // 현재 페이지 상태 추가
   const { data } = useQuery("test", expressTest);
   const Data = data?.COOKRCP01.row;
   console.log(Data);
+
+  const itemsPerPage = 16; // 페이지 당 아이템 수
+  const startIndex = 40;
+  const endIndex = 140;
+  const limitedData = Data?.slice(startIndex, endIndex);
+  
+  const indexOfLastItem = currentPage * itemsPerPage;
+  const indexOfFirstItem = indexOfLastItem - itemsPerPage;
+  const currentItems = limitedData?.slice(indexOfFirstItem, indexOfLastItem);
+
+  const handlePageChange = (event, value) => {
+    setCurrentPage(value);
+  };
+
   return (
     <div>
       <Header />
@@ -15,7 +31,7 @@ export default function Cucun() {
         <div className="w-full max-w-[1200px]">
           <h1 className=" text-center font-bold mt-16 mb-12">인기 레시피</h1>
           <div className="grid xl:grid-cols-4 gap-4 md:grid-cols-3 p-4">
-            {Data?.slice(40, 56).map((item, index) => (
+            {currentItems?.map((item, index) => (
               <div key={index} className="flex flex-col items-center relative">
                 {/* 이미지 */}
                 <img
@@ -39,6 +55,13 @@ export default function Cucun() {
             ))}
           </div>
         </div>
+      </div>
+      <div className="flex justify-center mb-4 text-[32px]">
+        <Pagination
+          count={Math.ceil(limitedData?.length / itemsPerPage)} // 전체 페이지 수 계산
+          shape="rounded"
+          onChange={handlePageChange} // 페이지 변경 핸들러
+        />
       </div>
       <Footer />
     </div>
