@@ -24,7 +24,7 @@ export default function Detail() {
       <div className="w-full max-w-7xl mx-auto lg:flex">
 
         {/* Left Content */}
-        <div className="w-2/3 p-8">
+        <div className="w-2/3 p-8 mb-16">
         <h3 className="text-4xl font-semibold mb-4 text-red-500">- 레시피</h3>
           <ol className=" list-none ">
             <li className="mt-8 text-[18px] font-semibold">{item?.MANUAL01}</li>
