@@ -7,6 +7,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Cucun from "./routes/Cucun";
 import NewResipy from "./routes/NewResipy";
 import GeaTip from "./routes/GeaTip";
+import Detail from "./routes/Detail";
 
 const router = createBrowserRouter([
   {
@@ -16,6 +17,10 @@ const router = createBrowserRouter([
   {
     path: "/cucun",
     element: <Cucun />,
+  },
+  {
+    path: "/cucun/:RCP_NM",
+    element: <Detail />,
   },
   {
     path: "/newresipy",

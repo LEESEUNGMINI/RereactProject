@@ -5,6 +5,7 @@ import { Button, Carousel } from "react-bootstrap"; // Bootstrap Carousel import
 
 import Header from "./Component/Header";
 import Footer from "./Component/Footer";
+import { Link } from "react-router-dom";
 
 function App() {
   const { data } = useQuery("test", expressTest);
@@ -226,14 +227,17 @@ function App() {
               {Data?.slice(40, 48).map((item, index) => (
                 <div
                   key={index}
-                  className="flex flex-col items-center relative"
+                  className="flex flex-col items-center relative overflow-hidden"
                 >
                   {/* 이미지 */}
-                  <img
-                    src={item?.ATT_FILE_NO_MAIN} // 이미지 소스
-                    alt={item?.RCP_NM} // 대체 텍스트
-                    className="w-full h-[240px] rounded-lg object-cover object-center "
-                  />
+                  <Link to="/cucun" className="w-full">
+                    <img
+                      src={item?.ATT_FILE_NO_MAIN} // 이미지 소스
+                      alt={item?.RCP_NM} // 대체 텍스트
+                      className="w-full h-[240px] rounded-lg object-cover object-center hover:scale-105 transition-transform duration-300 "
+                    />
+                  </Link>
+
                   <div className="w-[55px] h-[55px] rounded-[50%] absolute bottom-8 right-14 bg-[#CD2032] flex justify-center font-semibold items-center text-white text-[14px]">
                     인기
                   </div>
@@ -316,14 +320,16 @@ function App() {
                   key={index}
                   className={`divs div-${
                     index + 1
-                  } flex flex-col items-center relative`}
+                  } flex flex-col items-center relative overflow-hidden`}
                 >
                   {/* 이미지 */}
-                  <img
-                    src={item?.ATT_FILE_NO_MAIN} // 이미지 소스
-                    alt={item?.RCP_NM} // 대체 텍스트
-                    className="w-full h-[auto] object-cover object-center "
-                  />
+                  <div className="w-full overflow-hidden">
+                    <img
+                      src={item?.ATT_FILE_NO_MAIN} // 이미지 소스
+                      alt={item?.RCP_NM} // 대체 텍스트
+                      className="w-full h-[auto] object-cover object-center hover:scale-105 transition-transform duration-300 cursor-pointer "
+                    />
+                  </div>
 
                   {/* 소개 */}
                   <div className={`w-full texts text-${index + 1}`}>
