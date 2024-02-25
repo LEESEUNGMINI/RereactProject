@@ -7,7 +7,7 @@ export default function GeaTip() {
     <>
       <Header />
       <div className="w-full flex justify-center">
-        <div className="w-full max-w-[1200px] flex flex-col">
+        <div className="w-full max-w-[1200px] flex flex-col p-4">
           <h1 className=" text-center font-bold mt-16 mb-12">계량 팁</h1>
           {/* 큰 내용 */}
           <div className="w-full flex flex-col items-center text-gray-500">
@@ -103,7 +103,7 @@ export default function GeaTip() {
             </span>
           </div>
           {/* 그리드 4개 */}
-          <div className="grid xl:grid-cols-4 gap-4 md:grid-cols-3 p-4 mb-32">
+          <div className="grid grid-cols-2 xl:grid-cols-4 gap-4 md:grid-cols-3 p-4 mb-32">
             <div>
               <img
                 src="https://ottogi.okitchen.co.kr/images/category/tip06.jpg"
