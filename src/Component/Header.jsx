@@ -37,17 +37,8 @@ export default function Header() {
               id="Hidden_div"
               className=" space-x-4 h-full items-center text-white font-bold text-[20px] hidden xl:flex "
             >
-              <Link to="#" className="text-white no-underline">
-                {" "}
-                <p className=" cursor-pointer">추천 레시피</p>
-              </Link>
-              <Link to="/cucun" className="text-white no-underline">
-                {" "}
-                <p className=" cursor-pointer">추천 간편식</p>{" "}
-              </Link>
-              <Link to="/cucun" className="text-white no-underline">
-                <p className=" cursor-pointer">이색 추천 레시피</p>
-              </Link>
+            <p>#찌개맛집</p>
+            <p>#이색레시피</p>
             </div>
             <button
               id="main_button"

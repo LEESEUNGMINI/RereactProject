@@ -13,7 +13,7 @@ export default function Cucun() {
 
   const itemsPerPage = 16; // 페이지 당 아이템 수
   const startIndex = 40;
-  const endIndex = 140;
+  const endIndex = 78;
   const limitedData = Data?.slice(startIndex, endIndex);
   
   const indexOfLastItem = currentPage * itemsPerPage;

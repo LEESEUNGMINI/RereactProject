@@ -40,7 +40,7 @@ export default function Cucun() {
                   className="w-full h-[240px] rounded-lg object-cover object-center "
                 />
                 <div className="w-[55px] h-[55px] rounded-[50%] absolute bottom-8 right-14 bg-[#CD2032] flex justify-center font-semibold items-center text-white text-[14px]">
-                  인기
+                  신규
                 </div>
                 <div className="w-[55px] h-[55px] rounded-[50%] absolute bottom-8 -right-0 bg-[#f49700] flex justify-center font-semibold items-center text-white text-[14px]">
                   {item?.RCP_WAY2}
