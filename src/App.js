@@ -15,7 +15,7 @@ function App({ props }) {
       state: props,
     });
   };
-  onClickCucunItem();
+
   const { data } = useQuery("test", expressTest);
   const Data = data?.COOKRCP01.row;
   console.log(Data);
@@ -54,7 +54,12 @@ function App({ props }) {
                 <p className="text-lg mb-5">
                   Nulla vitae elit libero, a pharetra augue mollis interdum.
                 </p>
-                <button className="btn btn-danger btn-lg">레시피 보기</button>
+                <button
+                  onClick={onClickCucunItem}
+                  className="btn btn-danger btn-lg"
+                >
+                  레시피 보기
+                </button>
               </div>
             </div>
           </div>
