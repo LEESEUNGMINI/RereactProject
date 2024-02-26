@@ -8,14 +8,6 @@ import Footer from "./Component/Footer";
 import { Link, useNavigate } from "react-router-dom";
 
 function App({ props }) {
-  const navigate = useNavigate();
-
-  const onClickCucunItem = () => {
-    navigate(`/cucun/${props.RCP_NM}`, {
-      state: props,
-    });
-  };
-
   const { data } = useQuery("test", expressTest);
   const Data = data?.COOKRCP01.row;
   console.log(Data);
