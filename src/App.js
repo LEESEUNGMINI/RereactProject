@@ -15,7 +15,7 @@ function App({ props }) {
       state: props,
     });
   };
-
+  onClickCucunItem();
   const { data } = useQuery("test", expressTest);
   const Data = data?.COOKRCP01.row;
   console.log(Data);
