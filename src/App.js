@@ -5,7 +5,7 @@ import { Button, Carousel } from "react-bootstrap"; // Bootstrap Carousel import
 
 import Header from "./Component/Header";
 import Footer from "./Component/Footer";
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 function App({ props }) {
   const { data } = useQuery("test", expressTest);
