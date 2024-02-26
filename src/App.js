@@ -54,12 +54,7 @@ function App({ props }) {
                 <p className="text-lg mb-5">
                   Nulla vitae elit libero, a pharetra augue mollis interdum.
                 </p>
-                <button
-                  onClick={onClickCucunItem}
-                  className="btn btn-danger btn-lg"
-                >
-                  레시피 보기
-                </button>
+                <button className="btn btn-danger btn-lg">레시피 보기</button>
               </div>
             </div>
           </div>

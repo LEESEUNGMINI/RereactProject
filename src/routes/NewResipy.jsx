@@ -4,12 +4,10 @@ import Footer from "../Component/Footer";
 import { useQuery } from "react-query";
 import { expressTest } from "../api";
 import { Pagination } from "@mui/material";
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 
-
-export default function Cucun({props}) {
+export default function Cucun({ props }) {
   // 네비게이션
-
 
   const [currentPage, setCurrentPage] = useState(1); // 현재 페이지 상태 추가
   const { data } = useQuery("test", expressTest);
@@ -20,7 +18,7 @@ export default function Cucun({props}) {
   const startIndex = 140;
   const endIndex = 190;
   const limitedData = Data?.slice(startIndex, endIndex);
-  
+
   const indexOfLastItem = currentPage * itemsPerPage;
   const indexOfFirstItem = indexOfLastItem - itemsPerPage;
   const currentItems = limitedData?.slice(indexOfFirstItem, indexOfLastItem);
@@ -28,13 +26,7 @@ export default function Cucun({props}) {
   const handlePageChange = (event, value) => {
     setCurrentPage(value);
   };
-  const navigate = useNavigate();
 
-  const onClickCucunItem = () => {
-    navigate(`/cucun/${props.RCP_NM}`, {
-      state: props
-    });
-  };
   return (
     <div>
       <Header />
@@ -45,13 +37,17 @@ export default function Cucun({props}) {
             {currentItems?.map((item, index) => (
               <div key={index} className="flex flex-col items-center relative">
                 {/* 이미지 */}
-                <Link to={`/cucun/${item?.RCP_NM}`} state={{ item }} className="w-full">
-  <img
-    src={item?.ATT_FILE_NO_MAIN}
-    alt={item?.RCP_NM}
-    className="w-full h-[240px] rounded-lg object-cover object-center"
-  />
-</Link>
+                <Link
+                  to={`/cucun/${item?.RCP_NM}`}
+                  state={{ item }}
+                  className="w-full"
+                >
+                  <img
+                    src={item?.ATT_FILE_NO_MAIN}
+                    alt={item?.RCP_NM}
+                    className="w-full h-[240px] rounded-lg object-cover object-center"
+                  />
+                </Link>
                 <div className="w-[55px] h-[55px] rounded-[50%] absolute bottom-8 right-14 bg-[#CD2032] flex justify-center font-semibold items-center text-white text-[14px]">
                   신규
                 </div>
