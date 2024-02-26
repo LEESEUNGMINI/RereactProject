@@ -39,7 +39,7 @@ function App({ props }) {
           <div className="h-[710px] flex justify-center">
             <img
               className="position-absolute top-0 start-0 w-100 h-100 object-cover darken-image"
-              src="https://ottogi.okitchen.co.kr/pds/upfile/2020-08-23_214060951[27].jpg"
+              src="https://pixabay.com/get/gd064b1de09584fde885c4aa8ea0db6de5036133b091b68f2cf8c37a75d585be5029fcb801d0b509001e0dee951833a0f.jpg"
               alt="First slide"
             />
 

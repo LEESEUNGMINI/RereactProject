@@ -8,6 +8,7 @@ import Cucun from "./routes/Cucun";
 import NewResipy from "./routes/NewResipy";
 import GeaTip from "./routes/GeaTip";
 import Detail from "./routes/Detail";
+import Service from "./routes/Service";
 
 const router = createBrowserRouter([
   {
@@ -29,6 +30,10 @@ const router = createBrowserRouter([
   {
     path: "/geatip",
     element: <GeaTip />,
+  },
+  {
+    path: "service",
+    element: <Service />,
   },
 ]);
 const queryClient = new QueryClient();

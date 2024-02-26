@@ -37,8 +37,8 @@ export default function Header() {
               id="Hidden_div"
               className=" space-x-4 h-full items-center text-white font-bold text-[20px] hidden xl:flex "
             >
-            <p>#찌개맛집</p>
-            <p>#이색레시피</p>
+              <p>#찌개맛집</p>
+              <p>#이색레시피</p>
             </div>
             <button
               id="main_button"
@@ -71,6 +71,9 @@ export default function Header() {
                   <Link to="/geatip" className="text-black no-underline">
                     <p className=" cursor-pointer">계량 팁 </p>
                   </Link>
+                  <Link to="/service" className="text-black no-underline">
+                    <p className=" cursor-pointer">고객센터 </p>
+                  </Link>
                 </motion.div>
               )}
             </AnimatePresence>
@@ -98,6 +101,13 @@ export default function Header() {
             <Link to="/geatip" className="text-black no-underline">
               <p className="hover:text-[#CD2032] duration-200 cursor-pointer">
                 계량 팁
+              </p>
+            </Link>
+          </div>
+          <div className="w-[100px] hover:text-[#CD2032] duration-200">
+            <Link to="/service" className="text-black no-underline">
+              <p className="hover:text-[#CD2032] duration-200 cursor-pointer">
+                고객센터
               </p>
             </Link>
           </div>
